@@ -2,13 +2,9 @@ import React from "react";
 
 export default function BrainDump() {
   return (
-    <div>
+    <div className="mt-6">
       <span className="font-semibold">Brain Dump</span>
-      <input
-        type="text"
-        id="large-input"
-        className="block w-full text-gray-900 border-2 border-slate-800 rounded-lg bg-gray-50 h-80"
-      />
+      <textarea className="resize-none mt-2 block w-full text-gray-900 border-2 border-slate-800 rounded-md bg-gray-50 h-96"></textarea>
     </div>
   );
 }

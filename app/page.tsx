@@ -5,18 +5,19 @@ import TimeBox from "@/components/TimeBox";
 import BrainDump from "@/components/BrainDump";
 import Date from "@/components/Date";
 import Hours from "@/components/Hours";
+import TextInputs from "@/components/TextInputs";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-      <div className="flex justify-between">
-        <div className="w-1/2">
+      <div className="columns-4 gap-4 flex m-4">
+        <div className="w-full mt-9">
           <TimeBox />
           <TopPriorities />
           <BrainDump />
         </div>
-        <div className="w-1/2">
+        <div className="w-full mt-4">
           <Date />
           <Hours />
         </div>
