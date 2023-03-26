@@ -27,20 +27,12 @@ export default function TopPriorities() {
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ): void {
     const { name, value } = event.target;
-    console.log(formData);
-
     setFormData((prevFormData) => ({
       ...prevFormData,
       [name]: value,
     }));
     const data = JSON.stringify(formData);
     localStorage.setItem("TopPriorities", data);
-  }
-
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>): void {
-    event.preventDefault();
-    // Save form data to localStorage or submit it to server
-    console.log(formData);
   }
 
   return (
