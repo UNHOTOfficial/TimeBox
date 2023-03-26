@@ -7,9 +7,11 @@ import Date from "@/components/Date";
 import Hours from "@/components/Hours";
 import TextInputs from "@/components/TextInputs";
 import Buttons from "@/components/Buttons";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
+    <div>
     <form className="columns-4 gap-4 flex m-4 font-roboto max-w-xl xl:mx-auto">
       <div className="flex flex-col w-full mt-9 items-center">
         <TimeBox />
@@ -26,5 +28,7 @@ export default function Home() {
         <Hours />
       </div>
     </form>
+      <Footer/>
+    </div>
   );
 }
