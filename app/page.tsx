@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
       <div className="columns-4 gap-4 flex m-4">
-        <div className="w-full mt-9">
+        <div className="flex flex-col w-full mt-9 items-center">
           <TimeBox />
           <TopPriorities />
           <BrainDump />

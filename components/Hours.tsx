@@ -6,9 +6,9 @@ export default function Hours() {
     5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,
   ];
   return (
-    <div className="border-2 border-slate-900 rounded-md">
+    <div className="border-2 border-slate-900 rounded-sm">
       {hours.map((hour) => (
-        <TextInputs key={hour} type="hours" count={hour} />
+        <TextInputs key={hour} type="hours" count={hour} hour={hour} />
       ))}
     </div>
   );
