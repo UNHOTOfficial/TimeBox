@@ -1,9 +1,12 @@
-import Script from "next/script";
+import React from "react";
 import "./globals.css";
 
 export const metadata = {
   title: "Time Box",
   description: "A To-Do List App.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
