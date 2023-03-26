@@ -9,16 +9,20 @@ import TextInputs from "@/components/TextInputs";
 
 export default function Home() {
   return (
-      <div className="columns-4 gap-4 flex m-4 font-roboto">
-        <div className="flex flex-col w-full mt-9 items-center">
-          <TimeBox />
-          <TopPriorities />
-          <BrainDump />
-        </div>
-        <div className="w-full mt-4">
-          <Date />
-          <Hours />
-        </div>
+    <div className="columns-4 gap-4 flex m-4 font-roboto max-w-xl xl:mx-auto">
+      <div className="flex flex-col w-full mt-9 items-center">
+        <TimeBox />
+        <TopPriorities />
+        <BrainDump />
       </div>
+      <div className="w-full mt-4">
+        <Date />
+        <div className="flex justify-around ml-8">
+          <span>:00</span>
+          <span>:30</span>
+        </div>
+        <Hours />
+      </div>
+    </div>
   );
 }

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Date() {
   return (
-    <div className="flex justify-evenly my-4">
+    <div className="flex justify-evenly mt-4 mb-5">
       <span className="font-semibold">Date:</span>
       <input
         type="text"
