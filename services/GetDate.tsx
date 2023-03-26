@@ -6,6 +6,6 @@ export function getTime() {
   const date = new Date();
   const minute = 1000 * 60;
   const hour = minute * 60;
- 
+
   return hour;
 }
