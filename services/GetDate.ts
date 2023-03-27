@@ -4,6 +4,11 @@ export function getDate() {
 }
 export function getTime() {
   const date = new Date();
+  date.toLocaleString("en-US", {
+    hour: "2-digit",
+    hour12: true,
+    timeZone: "Asia/Tehran",
+  });
   const hour = date.getHours() + 1;
 
   return hour;
