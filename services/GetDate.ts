@@ -4,12 +4,7 @@ export function getDate() {
 }
 export function getTime() {
   const date = new Date();
-  date.toLocaleString("en-US", {
-    hour: "2-digit",
-    hour12: true,
-    timeZone: "Asia/Tehran",
-  });
-  const hour = date.getHours() + 1;
-
-  return hour;
+  const utc = date.getTime() + date.getTimezoneOffset() * 60000;
+  const localTime = new Date(utc + 3600000 * 4.5);
+  return localTime.getHours();
 }
