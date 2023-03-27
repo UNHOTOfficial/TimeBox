@@ -1,4 +1,6 @@
-export const handleClick = (e: any) => {
+import React from "react";
+
+export const handleClick = (e: any): void => {
   if (e.target.disabled) {
     e.target.classList.toggle("border-blue-500");
   }
@@ -13,7 +15,6 @@ export const handleSave = () => {
   textAreas.forEach((textArea) => {
     textArea.disabled = true;
   });
-  localStorage.setItem("Status", "save");
 };
 
 export const handleEdit = () => {
