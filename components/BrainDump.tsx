@@ -1,5 +1,6 @@
 "use client";
 
+import UseEffect from "@/services/UseEffect";
 import React, { useEffect, useState } from "react";
 
 export default function BrainDump() {
@@ -10,13 +11,7 @@ export default function BrainDump() {
     0: "",
   });
 
-  useEffect(() => {
-    const savedData = localStorage.getItem("BrainDump");
-    if (savedData) {
-      const parsedData: FormData = JSON.parse(savedData);
-      setFormData(parsedData);
-    }
-  }, []);
+  UseEffect(setFormData, "BrainDump");
 
   function handleInputChange(
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>

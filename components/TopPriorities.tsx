@@ -1,6 +1,7 @@
 "use client";
 
 import { handleClick } from "@/services/Handlers";
+import UseEffect from "@/services/UseEffect";
 import React, { useEffect, useState } from "react";
 import TextInputs from "./TextInputs";
 
@@ -16,13 +17,7 @@ export default function TopPriorities() {
     2: "",
   });
 
-  useEffect(() => {
-    const savedData = localStorage.getItem("TopPriorities");
-    if (savedData) {
-      const parsedData: FormData = JSON.parse(savedData);
-      setFormData(parsedData);
-    }
-  }, []);
+  UseEffect(setFormData, "TopPriorities");
 
   function handleInputChange(
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -35,7 +30,7 @@ export default function TopPriorities() {
     const data = JSON.stringify(formData);
     localStorage.setItem("TopPriorities", data);
   }
-  
+
   return (
     <div className="mt-8 w-full">
       <span className="font-semibold">Top Priorities</span>
