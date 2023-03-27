@@ -5,6 +5,6 @@ export function getDate() {
 export function getTime() {
   const date = new Date();
   const utc = date.getTime() + date.getTimezoneOffset() * 60000;
-  const localTime = new Date(utc + 3600000 * 4.5);
-  return localTime.getHours();
+  const localTime = new Date(utc + 3600000 * 3.5);
+  return localTime.getHours()+1;
 }
