@@ -12,7 +12,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <div>
-      <form className="columns-4 gap-4 flex m-4 font-roboto max-w-xl xl:mx-auto">
+      <form className="columns-4 gap-4 flex m-4 font-roboto max-w-xl xl:mx-auto select-none">
         <div className="flex flex-col w-full mt-9 items-center">
           <TimeBox />
           <TopPriorities />
