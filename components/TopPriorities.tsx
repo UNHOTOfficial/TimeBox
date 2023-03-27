@@ -1,5 +1,6 @@
 "use client";
 
+import { handleClick } from "@/services/Handlers";
 import React, { useEffect, useState } from "react";
 import TextInputs from "./TextInputs";
 
@@ -34,7 +35,7 @@ export default function TopPriorities() {
     const data = JSON.stringify(formData);
     localStorage.setItem("TopPriorities", data);
   }
-
+  
   return (
     <div className="mt-8 w-full">
       <span className="font-semibold">Top Priorities</span>
@@ -50,6 +51,7 @@ export default function TopPriorities() {
               name="0"
               defaultValue={formData[0]}
               onChange={handleInputChange}
+              onClick={handleClick}
               className="border-x-2 border-t-2 border-slate-800 text-gray-900 text-sm rounded-t-sm block w-full p-2.5"
             />
           </li>
@@ -63,6 +65,7 @@ export default function TopPriorities() {
               name="1"
               defaultValue={formData[1]}
               onChange={handleInputChange}
+              onClick={handleClick}
               className="border-2 border-slate-800 text-gray-900 text-sm block w-full p-2.5"
             />
           </li>
@@ -76,6 +79,7 @@ export default function TopPriorities() {
               name="2"
               defaultValue={formData[2]}
               onChange={handleInputChange}
+              onClick={handleClick}
               className="border-x-2 border-b-2 border-slate-800 text-gray-900 text-sm rounded-b-sm block w-full p-2.5"
             />
           </li>

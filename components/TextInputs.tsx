@@ -1,4 +1,5 @@
 import { getTime } from "@/services/GetDate";
+import { handleClick } from "@/services/Handlers";
 import React from "react";
 
 export default function TextInputs({
@@ -30,6 +31,7 @@ export default function TextInputs({
           name={name}
           onChange={handleInputChange}
           defaultValue={formData[name]}
+          onClick={handleClick}
           className="bg-blue-100 w-full border-2 border-slate-800 text-gray-900 text-sm block p-2.5 first:border-t-0"
         />
       </li>
@@ -41,6 +43,7 @@ export default function TextInputs({
           name={name + 0.5}
           onChange={handleInputChange}
           defaultValue={formData[name + 0.5]}
+          onClick={handleClick}
           className="bg-blue-100 w-full border-y-2 border-slate-800 text-gray-900 text-sm block p-2.5 first:border-t-0"
         />
       </li>
@@ -60,6 +63,7 @@ export default function TextInputs({
           name={name}
           onChange={handleInputChange}
           defaultValue={formData[name]}
+          onClick={handleClick}
           className="w-full border-2 border-slate-800 text-gray-900 text-sm block p-2.5 first:border-t-0"
         />
       </li>
@@ -71,6 +75,7 @@ export default function TextInputs({
           name={name + 0.5}
           onChange={handleInputChange}
           defaultValue={formData[name + 0.5]}
+          onClick={handleClick}
           className="w-full border-y-2 border-slate-800 text-gray-900 text-sm block p-2.5 first:border-t-0"
         />
       </li>
