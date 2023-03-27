@@ -15,7 +15,10 @@ export default function TextInputs({
   return currentHour === hour ? (
     <ul className="flex">
       <li>
-        <span className="bg-blue-100 w-8 border-y-2 border-slate-800 text-gray-900 text-sm rounded-x-sm block p-2.5 first:border-t-0">
+        <span
+          className="bg-blue-100 w-8 border-y-2 border-slate-800 text-gray-900 text-sm rounded-x-sm block p-2.5 first:border-t-0"
+          id="hourInput"
+        >
           {hour}
         </span>
       </li>
@@ -23,7 +26,7 @@ export default function TextInputs({
       <li>
         <input
           type="text"
-          id="top2"
+          id={name}
           name={name}
           onChange={handleInputChange}
           defaultValue={formData[name]}
@@ -34,7 +37,7 @@ export default function TextInputs({
       <li>
         <input
           type="text"
-          id="top1"
+          id={name+0.5}
           name={name + 0.5}
           onChange={handleInputChange}
           defaultValue={formData[name + 0.5]}
@@ -53,7 +56,7 @@ export default function TextInputs({
       <li>
         <input
           type="text"
-          id="top2"
+          id={name}
           name={name}
           onChange={handleInputChange}
           defaultValue={formData[name]}
@@ -64,7 +67,7 @@ export default function TextInputs({
       <li>
         <input
           type="text"
-          id="top1"
+          id={name+0.5}
           name={name + 0.5}
           onChange={handleInputChange}
           defaultValue={formData[name + 0.5]}

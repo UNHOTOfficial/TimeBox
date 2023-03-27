@@ -32,9 +32,13 @@ export default function BrainDump() {
   return (
     <div className="mt-6 w-full">
       <span className="font-semibold">Brain Dump</span>
+      <label htmlFor="brainDump" className="sr-only">
+        Brian Dump
+      </label>
       <textarea
         className="resize-none w-full mt-2 block text-gray-900 border-2 border-slate-800 rounded-sm bg-gray-50 h-96"
         name="0"
+        id="brainDump"
         defaultValue={formData[0]}
         onChange={handleInputChange}
       ></textarea>

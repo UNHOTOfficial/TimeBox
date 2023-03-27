@@ -41,9 +41,12 @@ export default function TopPriorities() {
       <div className="mt-2">
         <ul>
           <li>
+            <label htmlFor="first" className="sr-only">
+              First Priority
+            </label>
             <input
               type="text"
-              id="top1"
+              id="first"
               name="0"
               defaultValue={formData[0]}
               onChange={handleInputChange}
@@ -51,9 +54,12 @@ export default function TopPriorities() {
             />
           </li>
           <li>
+            <label htmlFor="second" className="sr-only">
+              Second Priority
+            </label>
             <input
               type="text"
-              id="top2"
+              id="second"
               name="1"
               defaultValue={formData[1]}
               onChange={handleInputChange}
@@ -61,9 +67,12 @@ export default function TopPriorities() {
             />
           </li>
           <li>
+            <label htmlFor="third" className="sr-only">
+              Third Priority
+            </label>
             <input
               type="text"
-              id="top3"
+              id="third"
               name="2"
               defaultValue={formData[2]}
               onChange={handleInputChange}
