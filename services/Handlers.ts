@@ -2,6 +2,7 @@ import React from "react";
 
 export const handleClick = (e: any): void => {
   if (e.target.disabled) {
+    e.target.classList.remove("border-slate-800");
     e.target.classList.toggle("border-blue-500");
   }
 };
