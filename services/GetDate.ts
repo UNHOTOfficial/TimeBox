@@ -4,8 +4,7 @@ export function getDate() {
 }
 export function getTime() {
   const date = new Date();
-  const minute = 1000 * 60;
-  const hour = minute * 60;
+  const hour = date.getHours() + 1;
 
   return hour;
 }
