@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import TopPriorities from "@/components/TopPriorities";
@@ -8,8 +10,10 @@ import TextInputs from "@/components/TextInputs";
 import Buttons from "@/components/Buttons";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import { SetTheme } from "@/services/UseEffect";
 
 export default function Home() {
+  SetTheme();
   return (
     <div>
       <Header />
