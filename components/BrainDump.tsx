@@ -1,5 +1,7 @@
 "use client";
 
+import setFormDataUseEffect from "@/services/UseEffect";
+import SetFormDataUseEffect from "@/services/UseEffect";
 import UseEffect from "@/services/UseEffect";
 import React, { useEffect, useState } from "react";
 
@@ -11,7 +13,7 @@ export default function BrainDump() {
     0: "",
   });
 
-  UseEffect(setFormData, "BrainDump");
+  SetFormDataUseEffect(setFormData, "BrainDump");
 
   function handleInputChange(
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>

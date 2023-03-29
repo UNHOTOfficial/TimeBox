@@ -1,6 +1,8 @@
 "use client";
 
 import { handleClick } from "@/services/Handlers";
+import setFormDataUseEffect from "@/services/UseEffect";
+import SetFormDataUseEffect from "@/services/UseEffect";
 import UseEffect from "@/services/UseEffect";
 import React, { useEffect, useState } from "react";
 import TextInputs from "./TextInputs";
@@ -17,7 +19,7 @@ export default function TopPriorities() {
     2: "",
   });
 
-  UseEffect(setFormData, "TopPriorities");
+  SetFormDataUseEffect(setFormData, "TopPriorities");
 
   function handleInputChange(
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>

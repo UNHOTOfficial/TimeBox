@@ -1,4 +1,8 @@
-import React from "react";
+"use client";
+
+import handleDarkMode from "@/services/DarkMode";
+import { SetTheme } from "@/services/UseEffect";
+import React, { useEffect } from "react";
 import "./globals.css";
 
 export const metadata = {
@@ -14,9 +18,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  SetTheme();
+
   return (
-    <html lang="en" className="dark">
-      <body className="bg-slate-100 dark:bg-slate-900 dark:text-slate-100">{children}</body>
+    <html lang="en">
+      <body className="bg-slate-100 dark:bg-slate-900 dark:text-slate-100">
+        {children}
+      </body>
     </html>
   );
 }

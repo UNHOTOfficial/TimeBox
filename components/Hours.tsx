@@ -1,6 +1,8 @@
 "use client";
 
 import { getTime } from "@/services/GetDate";
+import setFormDataUseEffect from "@/services/UseEffect";
+import SetFormDataUseEffect from "@/services/UseEffect";
 import UseEffect from "@/services/UseEffect";
 import React, { useEffect, useState } from "react";
 import TextInputs from "./TextInputs";
@@ -75,7 +77,7 @@ export default function Hours() {
     36: "",
   });
 
-  UseEffect(setFormData, "Hours");
+  SetFormDataUseEffect(setFormData, "Hours");
 
   function handleInputChange(
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
