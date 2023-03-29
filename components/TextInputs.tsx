@@ -19,7 +19,7 @@ export default function TextInputs({
     <ul className="flex">
       <li>
         <span
-          className="bg-blue-100 w-8 border-y-2 border-l-2 border-slate-800 text-gray-900 text-sm rounded-x-sm block p-2.5 first:border-t-0 dark:bg-slate-700 dark:border-slate-300 dark:text-slate-100"
+          className="bg-blue-100 w-8 border-y-2 border-l-2 border-slate-800 text-gray-900 text-sm rounded-x-sm block p-2.5 first:border-t-0 dark:bg-slate-500 dark:border-slate-300 dark:text-slate-100"
           id="hourInput"
         >
           {hour}
@@ -34,7 +34,7 @@ export default function TextInputs({
           onChange={handleInputChange}
           defaultValue={formData[name]}
           onClick={handleClick}
-          className="bg-blue-100 w-full border-2 border-slate-800 text-gray-900 text-sm block p-2.5 first:border-t-0 dark:bg-slate-700 dark:border-slate-300 dark:text-slate-100"
+          className="bg-blue-100 w-full border-2 border-slate-800 text-gray-900 text-sm block p-2.5 first:border-t-0 dark:bg-slate-500 dark:border-slate-300 dark:text-slate-100"
         />
       </li>
 
@@ -46,7 +46,7 @@ export default function TextInputs({
           onChange={handleInputChange}
           defaultValue={formData[name + 0.5]}
           onClick={handleClick}
-          className="bg-blue-100 w-full border-y-2 border-r-2 border-slate-800 text-gray-900 text-sm block p-2.5 first:border-t-0 dark:bg-slate-700 dark:border-slate-300 dark:text-slate-100"
+          className="bg-blue-100 w-full border-y-2 border-r-2 border-slate-800 text-gray-900 text-sm block p-2.5 first:border-t-0 dark:bg-slate-500 dark:border-slate-300 dark:text-slate-100"
         />
       </li>
     </ul>
