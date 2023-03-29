@@ -1,6 +1,6 @@
 "use client";
 
-import handleDarkMode, { initDarkMode } from "@/services/DarkMode";
+import handleDarkMode from "@/services/DarkMode";
 import { SetTheme } from "@/services/UseEffect";
 import React, { useEffect } from "react";
 import "./globals.css";
@@ -19,7 +19,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   SetTheme();
-  initDarkMode();
 
   return (
     <html lang="en">

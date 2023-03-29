@@ -15,6 +15,9 @@ export default function SetFormDataUseEffect(setFormData: any, item: string) {
 }
 
 export function SetTheme() {
+  const moon = document.getElementById("moon");
+  const sun = document.getElementById("sun");
+
   useEffect(() => {
     const theme = localStorage.getItem("theme");
     if (theme) {
@@ -24,17 +27,21 @@ export function SetTheme() {
           window.matchMedia("(prefers-color-scheme: dark)").matches)
       ) {
         try {
+          moon?.classList.add("hidden");
+          sun?.classList.remove("hidden");
           document.getElementsByTagName("html")[0].classList.add("dark");
         } catch (error) {
           console.log(error);
         }
       } else {
         try {
+          moon?.classList.remove("hidden");
+          sun?.classList.add("hidden");
           document.getElementsByTagName("html")[0].classList.remove("dark");
         } catch (error) {
           console.log(error);
         }
       }
     }
-  }, []);
+  }, [moon, sun]);
 }
