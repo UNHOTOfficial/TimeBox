@@ -15,10 +15,9 @@ export default function SetFormDataUseEffect(setFormData: any, item: string) {
 }
 
 export function SetTheme() {
-  const moon = document.getElementById("moon");
-  const sun = document.getElementById("sun");
-
   useEffect(() => {
+    const moon = document.getElementById("moon");
+    const sun = document.getElementById("sun");
     const theme = localStorage.getItem("theme");
     if (theme) {
       if (
@@ -43,5 +42,5 @@ export function SetTheme() {
         }
       }
     }
-  }, [moon, sun]);
+  }, []);
 }
