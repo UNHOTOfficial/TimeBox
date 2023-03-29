@@ -19,7 +19,7 @@ export default function TextInputs({
     <ul className="flex">
       <li>
         <span
-          className="bg-blue-100 w-8 border-y-2 border-l-2 border-slate-800 text-gray-900 text-sm rounded-x-sm block p-2.5 first:border-t-0 dark:bg-slate-500 dark:border-slate-300 dark:text-slate-100"
+          className="w-8 text-gray-900 text-sm rounded-x-sm block p-2.5 border border-slate-900 dark:bg-slate-700 dark:text-slate-100 bg-blue-100"
           id="hourInput"
         >
           {hour}
@@ -34,7 +34,7 @@ export default function TextInputs({
           onChange={handleInputChange}
           defaultValue={formData[name]}
           onClick={handleClick}
-          className="bg-blue-100 w-full border-2 border-slate-800 text-gray-900 text-sm block p-2.5 first:border-t-0 dark:bg-slate-500 dark:border-slate-300 dark:text-slate-100"
+          className="w-full text-gray-900 text-sm block p-2.5 bg-blue-100 dark:bg-slate-800 border border-slate-800 dark:text-slate-100"
         />
       </li>
 
@@ -46,14 +46,14 @@ export default function TextInputs({
           onChange={handleInputChange}
           defaultValue={formData[name + 0.5]}
           onClick={handleClick}
-          className="bg-blue-100 w-full border-y-2 border-r-2 border-slate-800 text-gray-900 text-sm block p-2.5 first:border-t-0 dark:bg-slate-500 dark:border-slate-300 dark:text-slate-100"
+          className="w-full text-gray-900 text-sm block p-2.5  dark:bg-slate-700 bg-blue-100 border border-slate-900 dark:text-slate-100"
         />
       </li>
     </ul>
   ) : (
     <ul className="flex">
       <li>
-        <span className="w-8 border-y-2 border-l-2  border-slate-800 text-gray-900 text-sm rounded-x-sm block p-2.5 first:border-t-0 dark:bg-slate-700 dark:border-slate-300 dark:text-slate-100">
+        <span className="w-8 text-gray-900 text-sm rounded-x-sm block p-2.5 border border-slate-900 dark:bg-slate-700 dark:text-slate-100">
           {hour}
         </span>
       </li>
@@ -66,7 +66,7 @@ export default function TextInputs({
           onChange={handleInputChange}
           defaultValue={formData[name]}
           onClick={handleClick}
-          className="w-full border-2 border-slate-800 text-gray-900 text-sm block p-2.5 first:border-t-0 dark:bg-slate-700 dark:border-slate-300 dark:text-slate-100"
+          className="w-full text-gray-900 text-sm block p-2.5  dark:bg-slate-700 border border-slate-900 dark:text-slate-100"
         />
       </li>
 
@@ -78,7 +78,7 @@ export default function TextInputs({
           onChange={handleInputChange}
           defaultValue={formData[name + 0.5]}
           onClick={handleClick}
-          className="w-full border-y-2 border-r-2 border-slate-800 text-gray-900 text-sm block p-2.5 first:border-t-0 dark:bg-slate-700 dark:border-slate-300 dark:text-slate-100"
+          className="w-full text-gray-900 text-sm block p-2.5  dark:bg-slate-700  border border-slate-900 dark:text-slate-100"
         />
       </li>
     </ul>
