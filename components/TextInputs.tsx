@@ -1,3 +1,5 @@
+"use client";
+
 import { getTime } from "@/services/GetDate";
 import { handleClick } from "@/services/Handlers";
 import React from "react";
