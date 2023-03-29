@@ -19,7 +19,7 @@ export default function TextInputs({
     <ul className="flex">
       <li>
         <span
-          className="w-8 text-gray-900 text-sm rounded-x-sm block p-2.5 border border-slate-900 dark:bg-slate-700 dark:text-slate-100 bg-blue-100"
+          className="w-8 text-gray-900 text-sm rounded-x-sm block p-2.5 border border-slate-900 dark:text-slate-100 bg-blue-100 dark:border-slate-300 dark:bg-slate-800"
           id="hourInput"
         >
           {hour}
@@ -34,7 +34,7 @@ export default function TextInputs({
           onChange={handleInputChange}
           defaultValue={formData[name]}
           onClick={handleClick}
-          className="w-full text-gray-900 text-sm block p-2.5 bg-blue-100 dark:bg-slate-800 border border-slate-800 dark:text-slate-100"
+          className="w-full text-gray-900 text-sm block p-2.5 bg-blue-100 dark:bg-slate-800 border border-slate-800 dark:text-slate-100 dark:border-slate-300"
         />
       </li>
 
@@ -46,14 +46,14 @@ export default function TextInputs({
           onChange={handleInputChange}
           defaultValue={formData[name + 0.5]}
           onClick={handleClick}
-          className="w-full text-gray-900 text-sm block p-2.5  dark:bg-slate-700 bg-blue-100 border border-slate-900 dark:text-slate-100"
+          className="w-full text-gray-900 text-sm block p-2.5   bg-blue-100 border border-slate-900 dark:text-slate-100 dark:border-slate-300 dark:bg-slate-800"
         />
       </li>
     </ul>
   ) : (
     <ul className="flex">
       <li>
-        <span className="w-8 text-gray-900 text-sm rounded-x-sm block p-2.5 border border-slate-900 dark:bg-slate-700 dark:text-slate-100">
+        <span className="w-8 text-gray-900 text-sm rounded-x-sm block p-2.5 border border-slate-900 dark:bg-slate-700 dark:text-slate-300 dark:border-slate-100">
           {hour}
         </span>
       </li>
@@ -66,7 +66,7 @@ export default function TextInputs({
           onChange={handleInputChange}
           defaultValue={formData[name]}
           onClick={handleClick}
-          className="w-full text-gray-900 text-sm block p-2.5  dark:bg-slate-700 border border-slate-900 dark:text-slate-100"
+          className="w-full text-gray-900 text-sm block p-2.5  dark:bg-slate-700 border border-slate-900 dark:text-slate-100 dark:border-slate-300"
         />
       </li>
 
@@ -78,7 +78,7 @@ export default function TextInputs({
           onChange={handleInputChange}
           defaultValue={formData[name + 0.5]}
           onClick={handleClick}
-          className="w-full text-gray-900 text-sm block p-2.5  dark:bg-slate-700  border border-slate-900 dark:text-slate-100"
+          className="w-full text-gray-900 text-sm block p-2.5  dark:bg-slate-700  border border-slate-900 dark:text-slate-100 dark:border-slate-300"
         />
       </li>
     </ul>

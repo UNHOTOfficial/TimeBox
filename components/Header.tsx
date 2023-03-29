@@ -1,14 +1,32 @@
 "use client";
 
 import handleDarkMode from "@/services/DarkMode";
+import Link from "next/link";
 import React from "react";
 
 export default function Header() {
   return (
-    <div className="flex justify-between items-center p-4">
-      <span className="border-2 border-slate-900 px-4 py-1.5 font-bold  dark:border-slate-100">
-        TimeBox
-      </span>
+    <div className="flex justify-between items-center p-4 border-b">
+      <button className="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width={24}
+          height={24}
+          fill="currentColor"
+          className="bi bi-list"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fillRule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+          />
+        </svg>
+      </button>
+      <Link href="/">
+        <span className="border-2 border-slate-900 px-4 py-1.5 font-bold  dark:border-slate-100">
+          TimeBox
+        </span>
+      </Link>
       <label className="sr-only" htmlFor="darkModeToggle">
         Change Theme
       </label>

@@ -96,7 +96,7 @@ export default function Hours() {
   ];
 
   return (
-    <div className="border border-slate-900 rounded-sm">
+    <div className="border border-slate-900 rounded-sm dark:border-slate-200">
       {hours.map((hour) => (
         <TextInputs
           key={hour}
