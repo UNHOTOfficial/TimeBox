@@ -49,7 +49,7 @@ export default function TopPriorities() {
               defaultValue={formData[0]}
               onChange={handleInputChange}
               onClick={handleClick}
-              className="border-x-2 border-t-2 border-slate-800 text-gray-900 text-sm rounded-t-sm block w-full p-2.5 dark:bg-slate-700 dark:border-slate-100"
+              className="border-x-2 border-t-2 border-slate-800 text-gray-900 text-sm rounded-t-sm block w-full p-2.5 dark:bg-slate-700 dark:border-slate-300 dark:text-slate-100"
             />
           </li>
           <li>
@@ -63,7 +63,7 @@ export default function TopPriorities() {
               defaultValue={formData[1]}
               onChange={handleInputChange}
               onClick={handleClick}
-              className="border-2 border-slate-800 text-gray-900 text-sm block w-full p-2.5 dark:bg-slate-700 dark:border-slate-100"
+              className="border-2 border-slate-800 text-gray-900 text-sm block w-full p-2.5 dark:bg-slate-700 dark:border-slate-300 dark:text-slate-100"
             />
           </li>
           <li>
@@ -77,7 +77,7 @@ export default function TopPriorities() {
               defaultValue={formData[2]}
               onChange={handleInputChange}
               onClick={handleClick}
-              className="border-x-2 border-b-2 border-slate-800 text-gray-900 text-sm rounded-b-sm block w-full p-2.5 dark:bg-slate-700 dark:border-slate-100"
+              className="border-x-2 border-b-2 border-slate-800 text-gray-900 text-sm rounded-b-sm block w-full p-2.5 dark:bg-slate-700 dark:border-slate-300 dark:text-slate-100"
             />
           </li>
         </ul>

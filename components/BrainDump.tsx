@@ -33,7 +33,7 @@ export default function BrainDump() {
         Brian Dump
       </label>
       <textarea
-        className="resize-none w-full mt-2 block text-gray-900 border-2 border-slate-800 rounded-sm bg-gray-50 h-96 dark:bg-slate-700 dark:border-slate-100"
+        className="resize-none w-full mt-2 block text-gray-900 border-2 border-slate-800 rounded-sm bg-gray-50 h-96 dark:bg-slate-700 dark:border-slate-300 dark:text-slate-100"
         name="0"
         id="brainDump"
         defaultValue={formData[0]}

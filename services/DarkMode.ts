@@ -1,4 +1,4 @@
-export default function handleDarkMode(e: any) {
+export default function handleDarkMode() {
   const moon = document.getElementById("moon");
   const sun = document.getElementById("sun");
   const html = document.getElementsByTagName("html")[0];
