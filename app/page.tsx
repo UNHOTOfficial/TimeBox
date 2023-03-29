@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import TopPriorities from "@/components/TopPriorities";
-import TimeBox from "@/components/TimeBox";
 import BrainDump from "@/components/BrainDump";
 import Date from "@/components/Date";
 import Hours from "@/components/Hours";
@@ -13,10 +12,9 @@ import Header from "@/components/Header";
 export default function Home() {
   return (
     <div>
-      <Header/>
+      <Header />
       <form className="columns-4 gap-4 flex m-4 font-roboto max-w-3xl select-none xl:mx-auto">
         <div className="flex flex-col w-1/3 mt-9 items-center md:w-1/2">
-          <TimeBox />
           <TopPriorities />
           <BrainDump />
           <Buttons />
