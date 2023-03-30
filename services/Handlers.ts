@@ -2,7 +2,9 @@ import React from "react";
 
 export const handleClick = (
   e: any,
-  setIsDisabled: React.Dispatch<React.SetStateAction<boolean>>
+  setIsDisabled: React.Dispatch<React.SetStateAction<boolean>>,
+  click: number,
+  setClick: React.Dispatch<React.SetStateAction<number>>
 ) => {
   if (e.target.disabled) {
     setIsDisabled(true);
@@ -11,6 +13,7 @@ export const handleClick = (
   } else {
     setIsDisabled(false);
   }
+  setClick(click + 1);
 };
 
 export const handleSave = () => {

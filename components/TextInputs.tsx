@@ -16,6 +16,7 @@ export default function TextInputs({
   const currentHour = getTime();
 
   const [isDisabled, setIsDisabled] = useState(false);
+  const [click, setClick] = useState(0);
 
   return currentHour === hour ? (
     <ul className="flex">
@@ -35,7 +36,7 @@ export default function TextInputs({
           name={name}
           onChange={handleInputChange}
           defaultValue={formData[name]}
-          onClick={(e) => handleClick(e, setIsDisabled)}
+          onClick={(e) => handleClick(e, setIsDisabled, click, setClick)}
           className="w-full text-gray-900 text-sm block p-2.5   bg-blue-100 border border-slate-900 dark:text-slate-100 dark:border-slate-300 dark:bg-slate-800"
         />
       </li>
@@ -47,7 +48,7 @@ export default function TextInputs({
           name={name + 0.5}
           onChange={handleInputChange}
           defaultValue={formData[name + 0.5]}
-          onClick={(e) => handleClick(e, setIsDisabled)}
+          onClick={(e) => handleClick(e, setIsDisabled, click, setClick)}
           className="w-full text-gray-900 text-sm block p-2.5   bg-blue-100 border border-slate-900 dark:text-slate-100 dark:border-slate-300 dark:bg-slate-800"
         />
       </li>
@@ -67,7 +68,7 @@ export default function TextInputs({
           name={name}
           onChange={handleInputChange}
           defaultValue={formData[name]}
-          onClick={(e) => handleClick(e, setIsDisabled)}
+          onClick={(e) => handleClick(e, setIsDisabled, click, setClick)}
           className="w-full text-gray-900 text-sm block p-2.5  dark:bg-slate-700 border border-slate-900 dark:text-slate-100 dark:border-slate-300"
         />
       </li>
@@ -79,7 +80,7 @@ export default function TextInputs({
           name={name + 0.5}
           onChange={handleInputChange}
           defaultValue={formData[name + 0.5]}
-          onClick={(e) => handleClick(e, setIsDisabled)}
+          onClick={(e) => handleClick(e, setIsDisabled, click, setClick)}
           className="w-full text-gray-900 text-sm block p-2.5  dark:bg-slate-700  border border-slate-900 dark:text-slate-100 dark:border-slate-300"
         />
       </li>
