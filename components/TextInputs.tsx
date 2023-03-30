@@ -2,7 +2,8 @@
 
 import { getTime } from "@/services/GetDate";
 import { handleClick } from "@/services/Handlers";
-import React from "react";
+// import { handleClick } from "@/services/Handlers";
+import React, { useState } from "react";
 
 export default function TextInputs({
   type,
@@ -14,6 +15,8 @@ export default function TextInputs({
   formData,
 }: any) {
   const currentHour = getTime();
+
+  const [isDisabled, setIsDisabled] = useState(false);
 
   return currentHour === hour ? (
     <ul className="flex">
@@ -33,8 +36,8 @@ export default function TextInputs({
           name={name}
           onChange={handleInputChange}
           defaultValue={formData[name]}
-          onClick={handleClick}
-          className="w-full text-gray-900 text-sm block p-2.5 bg-blue-100 dark:bg-slate-800 border border-slate-800 dark:text-slate-100 dark:border-slate-300"
+          onClick={(e) => handleClick(e, setIsDisabled)}
+          className="w-full text-gray-900 text-sm block p-2.5   bg-blue-100 border border-slate-900 dark:text-slate-100 dark:border-slate-300 dark:bg-slate-800"
         />
       </li>
 
@@ -45,7 +48,7 @@ export default function TextInputs({
           name={name + 0.5}
           onChange={handleInputChange}
           defaultValue={formData[name + 0.5]}
-          onClick={handleClick}
+          onClick={(e) => handleClick(e, setIsDisabled)}
           className="w-full text-gray-900 text-sm block p-2.5   bg-blue-100 border border-slate-900 dark:text-slate-100 dark:border-slate-300 dark:bg-slate-800"
         />
       </li>
@@ -65,7 +68,7 @@ export default function TextInputs({
           name={name}
           onChange={handleInputChange}
           defaultValue={formData[name]}
-          onClick={handleClick}
+          onClick={(e) => handleClick(e, setIsDisabled)}
           className="w-full text-gray-900 text-sm block p-2.5  dark:bg-slate-700 border border-slate-900 dark:text-slate-100 dark:border-slate-300"
         />
       </li>
@@ -77,7 +80,7 @@ export default function TextInputs({
           name={name + 0.5}
           onChange={handleInputChange}
           defaultValue={formData[name + 0.5]}
-          onClick={handleClick}
+          onClick={(e) => handleClick(e, setIsDisabled)}
           className="w-full text-gray-900 text-sm block p-2.5  dark:bg-slate-700  border border-slate-900 dark:text-slate-100 dark:border-slate-300"
         />
       </li>

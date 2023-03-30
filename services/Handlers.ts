@@ -1,8 +1,15 @@
 import React from "react";
 
-export const handleClick = (e: any): void => {
+export const handleClick = (
+  e: any,
+  setIsDisabled: React.Dispatch<React.SetStateAction<boolean>>
+) => {
   if (e.target.disabled) {
-    e.target.classList.toggle("border-blue-500");
+    setIsDisabled(true);
+    e.target.classList.toggle("border-red-800");
+    e.target.classList.toggle("dark:border-red-800");
+  } else {
+    setIsDisabled(false);
   }
 };
 
