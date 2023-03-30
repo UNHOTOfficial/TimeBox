@@ -1,7 +1,6 @@
 "use client";
 
 import { handleEdit, handleReset, handleSave } from "@/services/Handlers";
-import React from "react";
 
 export default function Buttons({ action }: any) {
   return (

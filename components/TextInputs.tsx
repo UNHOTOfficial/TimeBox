@@ -2,8 +2,7 @@
 
 import { getTime } from "@/services/GetDate";
 import { handleClick } from "@/services/Handlers";
-// import { handleClick } from "@/services/Handlers";
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function TextInputs({
   type,

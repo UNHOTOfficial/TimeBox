@@ -1,11 +1,8 @@
 "use client";
 
 import { handleClick } from "@/services/Handlers";
-import setFormDataUseEffect from "@/services/UseEffect";
 import SetFormDataUseEffect from "@/services/UseEffect";
-import UseEffect from "@/services/UseEffect";
-import React, { useEffect, useState } from "react";
-import TextInputs from "./TextInputs";
+import React, { useState } from "react";
 
 export default function TopPriorities() {
   interface FormData {

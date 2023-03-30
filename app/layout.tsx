@@ -1,6 +1,4 @@
-import handleDarkMode from "@/services/DarkMode";
-import { SetTheme } from "@/services/UseEffect";
-import React, { useEffect } from "react";
+import React from "react";
 import "./globals.css";
 
 export const metadata = {

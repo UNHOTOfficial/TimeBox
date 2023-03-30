@@ -1,7 +1,6 @@
 "use client";
 
-import { getDate, getTime } from "@/services/GetDate";
-import React, { useState } from "react";
+import { getDate } from "@/services/GetDate";
 
 export default function Date() {
   return (
