@@ -7,11 +7,13 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hours from "@/components/Hours";
 import TopPriorities from "@/components/TopPriorities";
+import ResetDay from "@/services/Reset";
 import { FormAction, SetTheme } from "@/services/UseEffect";
 
 export default function Home() {
   SetTheme();
   FormAction();
+  ResetDay();
 
   return (
     <div>
