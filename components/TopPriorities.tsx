@@ -17,6 +17,7 @@ export default function TopPriorities() {
   });
 
   const [isDisabled, setIsDisabled] = useState(false);
+  const [click, setClick] = useState(0);
 
   SetFormDataUseEffect(setFormData, "TopPriorities");
 
@@ -47,7 +48,7 @@ export default function TopPriorities() {
               name="0"
               defaultValue={formData[0]}
               onChange={handleInputChange}
-              onClick={(e) => handleClick(e, setIsDisabled)}
+              onClick={(e) => handleClick(e, setIsDisabled, click, setClick)}
               className="border border-slate-800 text-gray-900 text-sm rounded-t-sm block w-full p-2.5 dark:bg-slate-700 dark:border-slate-300 dark:text-slate-100"
             />
           </li>
@@ -61,7 +62,7 @@ export default function TopPriorities() {
               name="1"
               defaultValue={formData[1]}
               onChange={handleInputChange}
-              onClick={(e) => handleClick(e, setIsDisabled)}
+              onClick={(e) => handleClick(e, setIsDisabled, click, setClick)}
               className="border my-1 border-slate-800 text-gray-900 text-sm block w-full p-2.5 dark:bg-slate-700 dark:border-slate-300 dark:text-slate-100"
             />
           </li>
@@ -75,7 +76,7 @@ export default function TopPriorities() {
               name="2"
               defaultValue={formData[2]}
               onChange={handleInputChange}
-              onClick={(e) => handleClick(e, setIsDisabled)}
+              onClick={(e) => handleClick(e, setIsDisabled, click, setClick)}
               className="border border-b-2 border-slate-800 text-gray-900 text-sm rounded-b-sm block w-full p-2.5 dark:bg-slate-700 dark:border-slate-300 dark:text-slate-100"
             />
           </li>
