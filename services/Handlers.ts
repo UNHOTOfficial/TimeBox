@@ -38,7 +38,11 @@ export const handleEdit = () => {
 };
 
 export const handleReset = () => {
-  localStorage.clear();
+  localStorage.removeItem("BrainDump");
+  localStorage.removeItem("Hours");
+  localStorage.removeItem("TopPriorities");
+  localStorage.removeItem("action");
+
   location.reload();
   localStorage.setItem("action", "reset");
 };

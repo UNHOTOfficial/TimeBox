@@ -7,9 +7,11 @@ export default function handleDarkMode() {
     moon?.classList.remove("hidden");
     sun?.classList.add("hidden");
     html.classList.add("dark");
+    localStorage.setItem("theme", "dark");
   } else {
     moon?.classList.add("hidden");
     sun?.classList.remove("hidden");
     html.classList.remove("dark");
+    localStorage.setItem("theme", "light");
   }
 }
