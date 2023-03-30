@@ -1,9 +1,7 @@
 "use client";
 
-import setFormDataUseEffect from "@/services/UseEffect";
 import SetFormDataUseEffect from "@/services/UseEffect";
-import UseEffect from "@/services/UseEffect";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 export default function BrainDump() {
   interface FormData {

@@ -44,3 +44,18 @@ export function SetTheme() {
     }
   }, []);
 }
+
+export function FormAction() {
+  useEffect(() => {
+    if (localStorage.getItem("action") === "save") {
+      const inputs = document.querySelectorAll("input");
+      const textAreas = document.querySelectorAll("textarea");
+      inputs.forEach((input) => {
+        input.disabled = true;
+      });
+      textAreas.forEach((textArea) => {
+        textArea.disabled = true;
+      });
+    }
+  }, []);
+}

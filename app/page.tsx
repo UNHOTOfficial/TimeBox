@@ -1,19 +1,18 @@
 "use client";
 
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import TopPriorities from "@/components/TopPriorities";
 import BrainDump from "@/components/BrainDump";
-import Date from "@/components/Date";
-import Hours from "@/components/Hours";
-import TextInputs from "@/components/TextInputs";
 import Buttons from "@/components/Buttons";
+import Date from "@/components/Date";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { SetTheme } from "@/services/UseEffect";
+import Hours from "@/components/Hours";
+import TopPriorities from "@/components/TopPriorities";
+import { FormAction, SetTheme } from "@/services/UseEffect";
 
 export default function Home() {
   SetTheme();
+  FormAction();
+
   return (
     <div>
       <Header />

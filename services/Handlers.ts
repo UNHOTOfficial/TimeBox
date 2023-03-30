@@ -22,6 +22,7 @@ export const handleSave = () => {
   textAreas.forEach((textArea) => {
     textArea.disabled = true;
   });
+  localStorage.setItem("action", "save");
 };
 
 export const handleEdit = () => {
@@ -33,11 +34,13 @@ export const handleEdit = () => {
   textAreas.forEach((textArea) => {
     textArea.disabled = false;
   });
+  localStorage.setItem("action", "edit");
 };
 
 export const handleReset = () => {
   localStorage.clear();
   location.reload();
+  localStorage.setItem("action", "reset");
 };
 
 // export function handleInputChange(
