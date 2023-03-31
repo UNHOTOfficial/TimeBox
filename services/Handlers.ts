@@ -8,8 +8,8 @@ export const handleClick = (
 ) => {
   if (e.target.disabled) {
     setIsDisabled(true);
-    e.target.classList.toggle("border-red-800");
-    e.target.classList.toggle("dark:border-red-800");
+    // e.target.classList.toggle("border-red-800");
+    // e.target.classList.toggle("dark:border-red-800");
   } else {
     setIsDisabled(false);
   }
