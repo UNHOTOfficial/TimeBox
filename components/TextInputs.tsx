@@ -2,8 +2,7 @@
 
 import { getTime } from "@/services/GetDate";
 import { handleClick } from "@/services/Handlers";
-import { useState } from "react";
-import DoneTaskInput from "./DoneTaskInput";
+import React, { useState } from "react";
 import UnDoneTaskInput from "./UndoneTask";
 
 export default function TextInputs({
@@ -21,74 +20,70 @@ export default function TextInputs({
   const [click, setClick] = useState(0);
 
   return currentHour === hour ? (
-    <ul className="flex">
-      <li>
-        <span
-          className="w-8 text-gray-900 text-sm rounded-x-sm block p-2.5 border border-slate-900 dark:text-slate-100 bg-blue-100 dark:border-slate-300 dark:bg-slate-800"
-          id="hourInput"
-        >
-          {hour}
-        </span>
-      </li>
+    <div className="grid grid-flow-col">
+      <span
+        className="w-8 text-gray-900 text-sm rounded-x-sm block p-2.5 border border-slate-900 dark:text-slate-100 bg-blue-100 dark:border-slate-300 dark:bg-slate-800"
+        id="hourInput"
+      >
+        {hour}
+      </span>
 
-      <li>
-        <input
-          type="text"
-          id={name}
-          name={name}
-          onChange={handleInputChange}
-          defaultValue={formData[name]}
-          onClick={(e) => handleClick(e, setIsDisabled, click, setClick)}
-          className="w-full text-gray-900 text-sm block p-2.5   bg-blue-100 border border-slate-900 dark:text-slate-100 dark:border-slate-300 dark:bg-slate-800"
-        />
-      </li>
+      <UnDoneTaskInput
+        key={name}
+        name={name}
+        handleInputChange={handleInputChange}
+        click={click}
+        formData={formData}
+        setClick={setClick}
+        setIsDisabled={setIsDisabled}
+        handleClick={handleClick}
+        isDisabled={isDisabled}
+      />
 
-      <li>
-        <input
-          type="text"
-          id={name + 0.5}
-          name={name + 0.5}
-          onChange={handleInputChange}
-          defaultValue={formData[name + 0.5]}
-          onClick={(e) => handleClick(e, setIsDisabled, click, setClick)}
-          className="w-full text-gray-900 text-sm block p-2.5   bg-blue-100 border border-slate-900 dark:text-slate-100 dark:border-slate-300 dark:bg-slate-800"
-        />
-      </li>
-    </ul>
+      <UnDoneTaskInput
+        key={name + 0.5}
+        name={name + 0.5}
+        handleInputChange={handleInputChange}
+        click={click}
+        formData={formData}
+        setClick={setClick}
+        setIsDisabled={setIsDisabled}
+        handleClick={handleClick}
+        isDisabled={isDisabled}
+      />
+    </div>
   ) : (
-    <ul className="flex">
-      <li>
-        <span className="w-8 text-gray-900 text-sm rounded-x-sm block p-2.5 border border-slate-900 dark:bg-slate-700 dark:text-slate-300 dark:border-slate-100">
-          {hour}
-        </span>
-      </li>
+    <div className="grid grid-flow-col">
+      <span className="w-8 text-gray-900 text-sm rounded-x-sm block p-2.5 border border-slate-900 dark:bg-slate-700 dark:text-slate-300 dark:border-slate-100">
+        {hour}
+      </span>
 
-      <li>
-        <label htmlFor={name} className="sr-only">
-          Hour
-        </label>
-        <input
-          type="text"
-          id={name}
-          name={name}
-          onChange={handleInputChange}
-          defaultValue={formData[name]}
-          onClick={(e) => handleClick(e, setIsDisabled, click, setClick)}
-          className="w-full text-gray-900 text-sm block p-2.5  dark:bg-slate-700 border border-slate-900 dark:text-slate-100 dark:border-slate-300"
-        />
-      </li>
+      <label htmlFor={name} className="sr-only">
+        Hour
+      </label>
+      <UnDoneTaskInput
+        key={name}
+        name={name}
+        handleInputChange={handleInputChange}
+        click={click}
+        formData={formData}
+        setClick={setClick}
+        setIsDisabled={setIsDisabled}
+        handleClick={handleClick}
+        isDisabled={isDisabled}
+      />
 
-      <li>
-        <input
-          type="text"
-          id={name + 0.5}
-          name={name + 0.5}
-          onChange={handleInputChange}
-          defaultValue={formData[name + 0.5]}
-          onClick={(e) => handleClick(e, setIsDisabled, click, setClick)}
-          className="w-full text-gray-900 text-sm block p-2.5  dark:bg-slate-700  border border-slate-900 dark:text-slate-100 dark:border-slate-300"
-        />
-      </li>
-    </ul>
+      <UnDoneTaskInput
+        key={name + 0.5}
+        name={name + 0.5}
+        handleInputChange={handleInputChange}
+        click={click}
+        formData={formData}
+        setClick={setClick}
+        setIsDisabled={setIsDisabled}
+        handleClick={handleClick}
+        isDisabled={isDisabled}
+      />
+    </div>
   );
 }

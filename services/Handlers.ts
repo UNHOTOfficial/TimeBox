@@ -13,7 +13,7 @@ export const handleClick = (
   } else {
     setIsDisabled(false);
   }
-  setClick(click + 1);
+  // setClick(click + 1);
 };
 
 export const handleSave = () => {
