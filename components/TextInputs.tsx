@@ -2,8 +2,8 @@
 
 import { getTime } from "@/services/GetDate";
 import { handleClick } from "@/services/Handlers";
-import React, { useState } from "react";
-import UnDoneTaskInput from "./UndoneTask";
+import { useState } from "react";
+import Tasks from "./Tasks";
 
 export default function TextInputs({
   type,
@@ -17,7 +17,7 @@ export default function TextInputs({
   const currentHour = getTime();
 
   const [isDisabled, setIsDisabled] = useState(false);
-  const [click, setClick] = useState(0);
+  // const [click, setClick] = useState(0);
 
   return currentHour === hour ? (
     <div className="grid grid-flow-col">
@@ -28,28 +28,26 @@ export default function TextInputs({
         {hour}
       </span>
 
-      <UnDoneTaskInput
+      <Tasks
         key={name}
         name={name}
         handleInputChange={handleInputChange}
-        click={click}
         formData={formData}
-        setClick={setClick}
         setIsDisabled={setIsDisabled}
         handleClick={handleClick}
         isDisabled={isDisabled}
+        type="now"
       />
 
-      <UnDoneTaskInput
+      <Tasks
         key={name + 0.5}
         name={name + 0.5}
         handleInputChange={handleInputChange}
-        click={click}
         formData={formData}
-        setClick={setClick}
         setIsDisabled={setIsDisabled}
         handleClick={handleClick}
         isDisabled={isDisabled}
+        type="now"
       />
     </div>
   ) : (
@@ -61,28 +59,26 @@ export default function TextInputs({
       <label htmlFor={name} className="sr-only">
         Hour
       </label>
-      <UnDoneTaskInput
+      <Tasks
         key={name}
         name={name}
         handleInputChange={handleInputChange}
-        click={click}
         formData={formData}
-        setClick={setClick}
         setIsDisabled={setIsDisabled}
         handleClick={handleClick}
         isDisabled={isDisabled}
+        type=""
       />
 
-      <UnDoneTaskInput
+      <Tasks
         key={name + 0.5}
         name={name + 0.5}
         handleInputChange={handleInputChange}
-        click={click}
         formData={formData}
-        setClick={setClick}
         setIsDisabled={setIsDisabled}
         handleClick={handleClick}
         isDisabled={isDisabled}
+        type=""
       />
     </div>
   );
