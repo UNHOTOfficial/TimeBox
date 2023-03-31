@@ -1,0 +1,4 @@
+# Die robots.txt Datei wurde von www.seo-ulm.com erstellt
+User-agent: *
+Disallow: 
+Sitemap: https://time-box-tau.vercel.app/sitemap.xml
