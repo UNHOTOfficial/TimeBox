@@ -20,7 +20,7 @@ export default function Footer() {
           </svg>
           By
           <Link
-            className="text-blue-600 ml-1"
+            className="text-blue-600 ml-1 dark:text-blue-300"
             href={"https://github.com/UNHOTOfficial"}
           >
             UnHot
