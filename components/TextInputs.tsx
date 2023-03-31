@@ -30,6 +30,9 @@ export default function TextInputs({
       </li>
 
       <li>
+        <label htmlFor={name} className="sr-only">
+          Hour
+        </label>
         <input
           type="text"
           id={name}
@@ -42,6 +45,9 @@ export default function TextInputs({
       </li>
 
       <li>
+        <label htmlFor={name + 0.5} className="sr-only">
+          Hour
+        </label>
         <input
           type="text"
           id={name + 0.5}
@@ -62,6 +68,9 @@ export default function TextInputs({
       </li>
 
       <li>
+        <label htmlFor={name} className="sr-only">
+          Hour
+        </label>
         <input
           type="text"
           id={name}
@@ -74,6 +83,9 @@ export default function TextInputs({
       </li>
 
       <li>
+        <label htmlFor={name + 0.5} className="sr-only">
+          Hour
+        </label>
         <input
           type="text"
           id={name + 0.5}
