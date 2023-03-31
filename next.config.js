@@ -9,11 +9,9 @@ const nextConfig = {
 
 const withPWAInit = require("next-pwa");
 
-const isDev = process.env.NODE_ENV !== "production";
-
 const withPWA = withPWAInit({
   dest: "public",
-  disable: isDev,
+  disable: process.env.NODE_ENV === "development",
 
   exclude: [
     // add buildExcludes here
