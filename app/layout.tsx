@@ -6,10 +6,10 @@ export const metadata = {
   description: "A To-Do List App.",
   icons: {
     icon: "/favicon.png",
+    apple: "/icons/icon-192x192.png",
   },
   manifest: "/manifest.json",
   themeColor: "black",
-  apple: "/icons/icon-512x512.png",
 };
 
 export default function RootLayout({
