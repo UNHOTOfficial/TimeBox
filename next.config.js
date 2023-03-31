@@ -24,7 +24,10 @@ const withPWA = withPWAInit({
       ) {
         return true;
       }
-      if (isDev && !asset.name.startsWith("static/runtime/")) {
+      if (
+        process.env.NODE_ENV === "development" &&
+        !asset.name.startsWith("static/runtime/")
+      ) {
         return true;
       }
       return false;
