@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const runtimeCaching = require("next-pwa/cache");
 const nextConfig = {
   experimental: {
     appDir: true,
@@ -7,13 +8,11 @@ const nextConfig = {
 };
 
 const withPWA = require("next-pwa")({
-  disable: false,
+  //disable: process.env.NODE_ENV === "development",
   dest: "public",
-  // disable: process.env.NODE_ENV === 'development',
   register: true,
-  // scope: '/app',
-  //sw: 'service-worker.js',
-  skipWaiting: true,
+  skipWaiting: false,
+  runtimeCaching,
 });
 
 module.exports = withPWA(nextConfig);
