@@ -32,9 +32,6 @@ export default function TextInputs({
       </li>
 
       <li>
-        <label htmlFor={name} className="sr-only">
-          Hour
-        </label>
         <input
           type="text"
           id={name}
@@ -47,9 +44,6 @@ export default function TextInputs({
       </li>
 
       <li>
-        <label htmlFor={name + 0.5} className="sr-only">
-          Hour
-        </label>
         <input
           type="text"
           id={name + 0.5}
@@ -73,33 +67,18 @@ export default function TextInputs({
         <label htmlFor={name} className="sr-only">
           Hour
         </label>
-        {click % 2 === 0 ? (
-          <UnDoneTaskInput
-            name={name}
-            handleInputChange={handleInputChange}
-            formData={formData}
-            handleClick={handleClick}
-            setIsDisabled={setIsDisabled}
-            click={click}
-            setClick={setClick}
-          />
-        ) : (
-          <DoneTaskInput
-            name={name}
-            handleInputChange={handleInputChange}
-            formData={formData}
-            handleClick={handleClick}
-            setIsDisabled={setIsDisabled}
-            click={click}
-            setClick={setClick}
-          />
-        )}
+        <input
+          type="text"
+          id={name}
+          name={name}
+          onChange={handleInputChange}
+          defaultValue={formData[name]}
+          onClick={(e) => handleClick(e, setIsDisabled, click, setClick)}
+          className="w-full text-gray-900 text-sm block p-2.5  dark:bg-slate-700 border border-slate-900 dark:text-slate-100 dark:border-slate-300"
+        />
       </li>
 
       <li>
-        <label htmlFor={name + 0.5} className="sr-only">
-          Hour
-        </label>
         <input
           type="text"
           id={name + 0.5}
